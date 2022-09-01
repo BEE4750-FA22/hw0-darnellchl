@@ -12,15 +12,21 @@ weave_options:
 <!-- You shouldn't need to modify this -->
 ```julia; echo = false; results = "hidden"
 using Pkg
-Pkg.activate(".")
+Pkg.activate(".") # looks for Project.toml in current directory
 Pkg.instantiate()
 ```
 
 # Problem 1
 
 ## Problem 1.1
+```julia
+function square_number(x)
+    return x^2
+end
+```
 
 ## Problem 1.2
+"We can see that $x^2=$ `j square_number(5)`."
 
 ## Problem 1.3
 
