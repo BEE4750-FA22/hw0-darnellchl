@@ -26,15 +26,42 @@ end
 ```
 
 ## Problem 1.2
-"We can see that $x^2=$ `j square_number(5)`."
+We can see that $x^2=$ `j square_number(5)`.
 
 ## Problem 1.3
+```julia
+using Plots
+using LaTeXStrings
+plot(square_number, -10, 10, xlabel = L"x", ylabel = L"y=x^2", title = "Squared Numbers", legend = false)
+```
 
 # Problem 2
 
 ## Problem 2.1
+We know that $\sqrt{x}$ lies between $\frac{x}{a}$ and $a$ because: \
+If $a > \sqrt{x}$, then $\frac{x}{a} < \sqrt{x}$. \
+If $a < \sqrt{x}$, then $\frac{x}{a} > \sqrt{x}$. \
+If $a = \sqrt{x}$, then $\frac{x}{a} = \sqrt{x}$. \
 
 ## Problem 2.2
+```julia
+using Statistics 
+
+function newtons_method(x,guess)
+  error = 1
+  stopping_err = 10e-10
+
+  while error > stopping_err
+    div = x / guess
+    guess = mean([div, guess])
+    error = abs(guess - sqrt(x))
+  end
+  return guess
+end
+
+newtons_method(2,20)
+```
+Using the function we created, the approximation for $\sqrt{2}$ is `j newtons_method(2,20)`.
 
 # Problem 3
 
