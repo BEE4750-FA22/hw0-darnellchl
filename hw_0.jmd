@@ -41,7 +41,7 @@ plot(square_number, -10, 10, xlabel = L"x", ylabel = L"y=x^2", title = "Squared 
 We know that $\sqrt{x}$ lies between $\frac{x}{a}$ and $a$ because: \
 If $a > \sqrt{x}$, then $\frac{x}{a} < \sqrt{x}$. \
 If $a < \sqrt{x}$, then $\frac{x}{a} > \sqrt{x}$. \
-If $a = \sqrt{x}$, then $\frac{x}{a} = \sqrt{x}$. \
+If $a = \sqrt{x}$, then $\frac{x}{a} = \sqrt{x}$.
 
 ## Problem 2.2
 ```julia
